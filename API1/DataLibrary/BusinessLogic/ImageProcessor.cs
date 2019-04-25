@@ -21,7 +21,7 @@ namespace DataLibrary1.BusinessLogic
                 using (var client = new HttpClient())
                 {
                     var post = await client.PostAsync(
-                                ReferenceList.ImgProcServer1,
+                                ReferenceList.ImgProcServer,
                                 new StringContent(myJson, Encoding.UTF8, "application/json"));
 
                     json = await post.Content.ReadAsStringAsync();
@@ -39,7 +39,7 @@ namespace DataLibrary1.BusinessLogic
                     using (var client = new HttpClient())
                     {
                         var post = await client.PostAsync(
-                                    ReferenceList.ImgProcServer2,
+                                    ReferenceList.ImgProcServer,
                                     new StringContent(myJson, Encoding.UTF8, "application/json"));
 
                         json = await post.Content.ReadAsStringAsync();

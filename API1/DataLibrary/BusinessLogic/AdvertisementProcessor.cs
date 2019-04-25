@@ -12,8 +12,8 @@ namespace DataLibrary.BusinessLogic
 	{
 		public static async Task<int> AddPostAsync(AdvertisementModel itemModel)
 		{
-			var sql = $@"INSERT INTO advertisement(ItemName, ItemDescription, ItemCategory,	ItemCount, City, Tele, Price, Con, Negotiable, Created,	Updated) " +
-						"VALUES(@ItemName, @ItemDescription, @ItemCategory, @ItemCount, @City, @Tele, @Price, @Con, @Negotiable, @Created, @Updated)";
+			var sql = $@"INSERT INTO advertisement(ItemName, ItemDescription, ItemCategory,	ItemCount, City, Tele, Price, Con, image, Negotiable, Created,	Updated) " +
+						"VALUES(@ItemName, @ItemDescription, @ItemCategory, @ItemCount, @City, @Tele, @Price, @Con, @image, @Negotiable, @Created, @Updated)";
 
 			var model = new AdvertisementModel
 			{
@@ -24,6 +24,7 @@ namespace DataLibrary.BusinessLogic
 				City = itemModel.City,
 				Tele = itemModel.Tele,
 				Price = itemModel.Price,
+                Image = itemModel.Image,
 				Con = itemModel.Con,
 				Negotiable = itemModel.Negotiable,
 			};
